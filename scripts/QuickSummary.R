@@ -24,10 +24,10 @@ plot(mymap,add=T,lwd=1.5,col="grey90")
 
 
 ##Output lists of unique locations and species
-write.csv(summary,"Acropora_SpeciesList.csv")
+write.csv(summary,"data/Acropora_SpeciesList.csv")
 locations <- d %>%
   group_by(loc) %>%
   summarise(Number=mean(Number),
             Longitude=mean(Longitude),
             Latitude=mean(Latitude))
-write.csv(locations,"Acropora_UniqueLocations.csv")
+write.csv(locations,"data/Acropora_UniqueLocations.csv")
