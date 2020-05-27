@@ -1,3 +1,7 @@
+###This script gives a quick summary and map from our microsat database
+###Rachael A. Bay
+###Last edited 05.27.20
+
 library(tidyverse)
 library(rworldmap)
 
