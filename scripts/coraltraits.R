@@ -50,85 +50,22 @@ t <- t %>%
 # put the data in wide format
 t.wide<- spread(t,trait_name,value)
 # data frame was being weird, write csv and read back in
-write.csv(t.wide,'t.wide.csv')
-t <- read.csv("t.wide.csv")
+write.csv(t.wide,'data/t.wide.csv')
+t <- read.csv("data/t.wide.csv")
 
-
-
-
+# plot every possible trait of interest to see how many species there are data for (just swap out x axis)
 ggplot(t, aes(x=Western.most.range.edge, y=species, group = species))+
   theme_bw()+
   geom_point(aes(color = species))+
   scale_y_discrete(limits = rev(levels(t$species)))+
   theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
 
-
-
-
-
-
-
-
-yes# let's begin by exploring the traits at the global level
+# what about global data?
 # create a subset of data that only includes global estimates
 global <- t %>%
   filter(location_name == 'Global estimate')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# range size (km^2)
-range <- global %>%
-  filter(trait_name == 'Range size')
-range$value <- as.numeric(paste(range$value))
-hist(range$value)
-
-# corallite width minimum
-cwmin <- global %>%
-  filter(trait_name == 'Corallite width minimum')
-cwmin$value <- as.numeric(paste(cwmin$value))
-hist(cwmin$value)
-
-# corallite width maximum
-cwmax <- global %>%
-  filter(trait_name == 'Corallite width maximum')
-cwmax$value <- as.numeric(paste(cwmax$value))
-hist(cwmax$value)
-    # how do max/min corallite diameter correlate?
-    cw <- merge(cwmin, cwmax, by = 'species')
-    plot(cw$value.x~cw$value.y)
-
-# colony maximum diameter (standard unit is cm)
-colmaxdiam <- global %>%
-  filter(trait_name == 'Colony maximum diameter')
-colmaxdiam$value <- as.numeric(paste(colmaxdiam$value))
-# divide by 100 to change to m
-colmaxdiam$value <- (colmaxdiam$value/100)
-hist(colmaxdiam$value)
-
-
-
-
-
-
-
-#####
-
+# out of curiosity...
 # what are the geographic dimensions of our trait database?
 min(t$latitude, na.rm = T) # -32.02379
 max(t$latitude, na.rm = T) # 40.79339
