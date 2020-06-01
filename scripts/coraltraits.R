@@ -6,14 +6,14 @@ library(dplyr)
 library(tidyr)
 
 # set wd
-setwd("/Users/brookebenson/Desktop/Dropbox/Coral Meta-Analysis/Coral-Group-Meta-Analysis/data")
+setwd("/Users/brookebenson/Desktop/Dropbox/Coral-Group-Meta-Analysis/")
 
 # read in the datasets
-t <- read.csv('trait-database.csv')
-g <- read.csv('GeneticData_Acropora_cleaned.csv')
+t <- read.csv('data/trait-database.csv')
+g <- read.csv('data/GeneticData_Acropora_cleaned.csv')
 
 # make separate columns for genus and species to isolate species 
-t <- t %>% separate(specie_name, c('genus','species'))
+ t <- t %>% separate(specie_name, c('genus','species'))
 
 # filter the trait data to include only the species for which we have genetic data
 t <- t %>%
@@ -29,7 +29,6 @@ t <- t %>%
            species == 'kimbeensis' |
            species == 'kirstyae' | 
            species == 'microphthalma' |
-           species == 'micropthalma' |
            species == 'millepora' |
            species == 'muricata' |
            species == 'palmata' |
@@ -48,10 +47,50 @@ t <- t %>%
            species == 'walindii' |
            species == 'yongei')
 
-# let's begin by exploring the traits at the global level
+# put the data in wide format
+t.wide<- spread(t,trait_name,value)
+# data frame was being weird, write csv and read back in
+write.csv(t.wide,'t.wide.csv')
+t <- read.csv("t.wide.csv")
+
+
+
+
+ggplot(t, aes(x=Western.most.range.edge, y=species, group = species))+
+  theme_bw()+
+  geom_point(aes(color = species))+
+  scale_y_discrete(limits = rev(levels(t$species)))+
+  theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
+
+
+
+
+
+
+
+
+yes# let's begin by exploring the traits at the global level
 # create a subset of data that only includes global estimates
 global <- t %>%
   filter(location_name == 'Global estimate')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # range size (km^2)
 range <- global %>%
