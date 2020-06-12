@@ -31,7 +31,8 @@ plot(sp.types~sp.clades)
 ###Make and save an output
 out <- data.frame(nobs=sp.obs,
                   nclades=sp.clades,
-                  ntypes=sp.types)
+                  ntypes=sp.types,
+                  as.data.frame.matrix(tab.clade))
 index <- match(species$X,rownames(out))
 out2 <- out[index,]
 rownames(out2) <- species$X
