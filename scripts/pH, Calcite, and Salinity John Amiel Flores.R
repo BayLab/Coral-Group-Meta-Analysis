@@ -14,13 +14,13 @@ layers.bio2 <- list_layers( datasets="Bio-ORACLE" )
 layers.bio2
 
 
-# Download environmental data layers (mean pH, mean Aragonite, and mean Sea Surface Salinity at the Sea Surface)
+# Download environmental data layers (mean pH, mean Calcite, and mean Sea Surface Salinity at the Sea Surface)
 environment.coral <- load_layers( layercodes = c("BO_ph" , "BO_calcite", "BO2_salinitymean_ss") , equalarea=FALSE, rasterstack=TRUE)
 
 
-# Download pH, Aragnite, SS salinity
+# Download pH, Calcite, SS salinity
 pH <- load_layers("BO_ph")
-aragonite <- load_layers("BO_calcite")
+calcite.mean <- load_layers("BO_calcite")
 mean_ss_salinity <- load_layers("BO2_salinitymean_ss")
 
 
@@ -57,7 +57,7 @@ calcite.mean <- load_layers("BO_calcite")
 salinity.mean.surface <- load_layers("BO2_salinitymean_ss")
 
 
-# Crop raster to fit the Indo-Pacific, Indian OCean, Carribean
+# Crop raster to fit the Indo-Pacific, Indian Ocean, Carribean, Hawaii,and Global Map *extent values are the lat and long limits *add global map
 indo.pacif <- extent(75, 200, -50, 50)
 
 ph.mean.surface.IP.crop <- crop(ph.mean.surface,indo.pacif)
@@ -75,6 +75,19 @@ carib <- extent(-100,-50,0,35)
 ph.mean.surface.C.crop <- crop(ph.mean.surface, carib)
 calcite.mean.C.crop <- crop(calcite.mean, carib)
 salinity.mean.surface.C.crop <- crop(salinity.mean.surface, carib)
+
+Hawaii <- extent(-162,-152,16,25)
+
+ph.mean.surface.H.crop <- crop(ph.mean.surface, Hawaii)
+calcite.mean.H.crop <- crop(calcite.mean, Hawaii)
+salinity.mean.surface.H.crop <- crop(salinity.mean.surface, Hawaii)
+
+globe <- extent(-180, 180, -50, 50)
+
+ph.mean.surface.G.crop <- crop(ph.mean.surface,globe)
+calcite.mean.G.crop <- crop(calcite.mean,globe)
+salinity.mean.surface.G.crop <- crop(salinity.mean.surface,globe)
+
 
 # Generate a nice color ramp and plot the map
 my.colors = colorRampPalette(c("#5E85B8","#EDF0C0","#C13127"))
@@ -108,3 +121,25 @@ plot(calcite.mean.C.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
 
 plot(salinity.mean.surface.C.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
   title(cex.sub = 1.25, sub = "Mean Sea Surface Salinity (PSS)")
+
+## For Hawaii
+plot(ph.mean.surface.H.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
+  title(cex.sub = 1.25, sub = "Mean Sea Surface pH")
+
+plot(calcite.mean.H.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
+  title(cex.sub = 1.25, sub = "Mean Calcite (mol/m)")
+
+plot(salinity.mean.surface.H.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
+  title(cex.sub = 1.25, sub = "Mean Sea Surface Salinity (PSS)")
+
+## For Globe
+plot(ph.mean.surface.G.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
+  title(cex.sub = 1.25, sub = "Mean Sea Surface pH")
+
+plot(calcite.mean.G.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
+  title(cex.sub = 1.25, sub = "Mean Calcite (mol/m)")
+
+plot(salinity.mean.surface.G.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
+  title(cex.sub = 1.25, sub = "Mean Sea Surface Salinity (PSS)")
+
+# how any of these environmental variables affects gametes or larvae of corals or invertebrates
