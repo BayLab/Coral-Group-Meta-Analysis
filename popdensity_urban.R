@@ -61,6 +61,6 @@ View(DEN)
 
 #make ggplot an object
 coralpops <-ggplot(data=world) + geom_polygon(aes(x = long, y = lat, group=group), fill="white", color = "gray") + coord_fixed(1.3) +guides(fill=FALSE)+guides(fill=FALSE)+geom_point(data=Acropora_UniqueLocations, aes(x=Longitude, y=Latitude))
-coralpops                                                                                        
+coralpops                                                                                      
 all<-coralpops 
 
