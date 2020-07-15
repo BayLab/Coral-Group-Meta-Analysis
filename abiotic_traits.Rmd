@@ -1,0 +1,78 @@
+---
+title: "Abiotic Factors - Coral Group"
+output: html_document
+date: 6/3/20
+by: MK
+---
+
+```{r}
+#Following code is from Bio-Oracle's website for integration with R
+install.packages("sdmpredictors")
+install.packages("leaflet")
+
+library(sdmpredictors)
+list_datasets()
+list_layers() #<-shows layer codes
+layer_stats()
+
+```
+
+**Sample code from website for maximum temperature at sea bottom**
+```{r}
+temp.max.bottom <- load_layers("BO2_tempmax_bdmax")
+ne.atlantic.ext <- extent(-100, 45, 30.75, 72.5)
+temp.max.bottom.crop <- crop(temp.max.bottom, ne.atlantic.ext)
+my.colors = colorRampPalette(c("#5E85B8","#EDF0C0","#C13127"))
+plot(temp.max.bottom.crop,col=my.colors(1000),axes=FALSE, box=FALSE)
+title(cex.sub = 1.25, sub = "Maximum temperature at the sea bottom (ºC)")
+
+```
+
+**Mean Sea Surface Tempearture**
+```{r}
+library(sdmpredictors)
+library(leaflet)
+
+layers.bio2 <- list_layers( datasets="Bio-ORACLE" )
+
+#abiotic_factors<-load_layers("BO2_tempmean_ss")
+
+abiotic_factors<-load_layers(layercodes = c("BO2_tempmean_ss", "BO2_chlomean_bdmean"), equalarea=FALSE, rasterstack=TRUE)
+
+#BO2_tempmean_ss = sea surface temperature mean
+#BO2_ppmean_bdmean = net primary production of carbon at mean bottom depth
+#BO2_chlomean_bdmean = chlorophyll concentration (mean at mean depth)
+
+bathymetry <- load_layers("BO_bathymean")
+
+sites<-data.frame(Name=c("Naha, Japan", "Western Austrailia", "Walea Kepulauan, Indonesia"), Lon=c(127.33,113.72,122.16), Lat=c(26.2,-28.41,-0.24))
+
+#Visualize sites of interest in google maps
+google<-leaflet()
+google<-addTiles(google)
+google<-addMarkers(google, lng = sites$Lon, lat=sites$Lat, popup = sites$Name)
+google
+
+#Extract enviornmental values from layers
+sites.abiotic<-data.frame(Name=sites$Name, depth=extract(bathymetry,sites[,2:2]), extract(abiotic_factors,sites[,2:2]))
+sites.abiotic #this gives weird temperature values
+
+View(layers.bio2)
+View(abiotic_factors)
+```
+
+**Mean Sea Surface Temp Graph**
+```{r}
+temp.ss <- load_layers("BO2_tempmean_ss")
+sites.ext <- extent(100, 145, -25, 45)
+temp.ss.crop <- crop(temp.ss, sites.ext)
+my.colors = colorRampPalette(c("#5E85B8","#EDF0C0","#C13127"))
+plot(temp.ss.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
+title(cex.sub = 1.25, sub = "Sea Surface Temperature (ºC)")
+
+#just gives temp for the area not sure how to get exact values for specific locations
+```
+
+
+
+
