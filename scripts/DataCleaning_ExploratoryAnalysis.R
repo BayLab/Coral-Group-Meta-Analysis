@@ -116,6 +116,66 @@ p <- ggplot(persite,aes(x=Latitude,color=Ocean)) +
   theme_bw()
 p
 
+######## Brooke
+plot <- ggplot(traitmerge, aes(x=Colony.maximum.diameter, y=He.all, text = paste("loc",loc)))+
+  theme_bw()+
+  geom_point(aes(color = Species))+
+#  geom_smooth()+
+  theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
+ggplotly(subplot(list(plot),nrows=1,titleY=F) %>% layout(showlegend=T))	
+
+plot <- ggplot(traitmerge, aes(x=Corallite.width.minimum, y=He.all))+
+  theme_bw()+
+  geom_point(aes(color = Species))+
+  geom_smooth()+
+  theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
+ggplotly(subplot(list(plot),nrows=1,titleY=F) %>% layout(showlegend=T))	
+
+plot <- ggplot(traitmerge, aes(x=Corallite.width.maximum, y=He.all))+
+  theme_bw()+
+  geom_point(aes(color = Species))+
+  geom_smooth()+
+  theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
+ggplotly(subplot(list(plot),nrows=1,titleY=F) %>% layout(showlegend=T))	
+
+plot <- ggplot(traitmerge, aes(x=Depth.lower, y=He.all))+
+  theme_bw()+
+  geom_point(aes(color = Species))+
+  geom_smooth()+
+  theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
+ggplotly(subplot(list(plot),nrows=1,titleY=F) %>% layout(showlegend=T))	
+
+plot <- ggplot(traitmerge, aes(x=Depth.upper, y=He.all))+
+  theme_bw()+
+  geom_point(aes(color = Species))+
+  geom_smooth()+
+  theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
+ggplotly(subplot(list(plot),nrows=1,titleY=F) %>% layout(showlegend=T))	
+
+plot <- ggplot(traitmerge, aes(x=Range.size, y=He.all))+
+  theme_bw()+
+  geom_point(aes(color = Species))+
+  geom_smooth()+
+  theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
+ggplotly(subplot(list(plot),nrows=1,titleY=F) %>% layout(showlegend=T))	
+
+plot <- ggplot(traitmerge, aes(x=Species.age.phylogeny, y=He.all,text = paste("loc",loc)))+
+  theme_bw()+
+  geom_point(aes(color = Species))+
+#  geom_smooth()+
+  theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
+ggplotly(subplot(list(plot),nrows=1,titleY=F) %>% layout(showlegend=T))	
+
+plot <- ggplot(traitmerge, aes(x=Growth.form.typical, y=He.all,text = paste("loc",loc)))+
+  theme_bw()+
+  geom_boxplot(aes())+
+  #  geom_smooth()+
+  theme(axis.text.x=element_text(angle = 90, vjust = 0.5))
+ggplotly(subplot(list(plot),nrows=1,titleY=F) %>% layout(showlegend=T))	
+
+
+
+
 ##Look at 'well represented' species
 persite$n.sites.species <- sapply(persite$Species,function(x) length(which(persite$Species==x))) #Add column that tells us how many sites for the species overall
 nsites.threshold = 20 # Minimum number of sites/species
