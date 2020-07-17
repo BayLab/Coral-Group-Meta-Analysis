@@ -15,6 +15,15 @@ d$Ocean <- "Pacific"
 d$Ocean[d$Longitude>-100 & d$Longitude<0] <- "Caribbean"
 d$Ocean[d$Longitude>0 & d$Longitude<100] <- "Indian"
 
+# read in the global trait estimates
+globaltraits <- read.csv('data/Global.estimates.csv')
+# add a column for full species name that will match the corresponding column in the genetic database
+globaltraits$Species<- paste("Acropora",globaltraits$species, sep = " ")
+# merge the two spreadsheets by Species
+d <- merge(d,globaltraits, by = 'Species')
+head(d)
+
+
 ##Do some filtering
 N.threshold = 10 # Sample size threshold
 filt <- d %>% 
@@ -53,8 +62,12 @@ p # Doesn't look like much :P
 library(randomForest)
 imp.vars <- c("He.all","Species","Ocean",
               "Latitude","Longitude",
-              "Number","Cross.species","Primer.note")
-rf <- randomForest(He.all~.,data=filt[,imp.vars])
+              "Number","Cross.species","Primer.note",
+              "Depth.lower","Depth.upper","Growth.form.typical")
+sub <- filt[,imp.vars]
+nona <- na.omit(sub)
+dim(nona)
+rf <- randomForest(He.all~.,data=nona)
 varImpPlot(rf)
 
 ind <- sample(1:nrow(filt),round(nrow(filt)*0.75),replace=F) #Training set is 75% of data
@@ -100,7 +113,7 @@ dim(persite)
 # read in the global trait estimates
 globaltraits <- read.csv('data/Global.estimates.csv')
 # add a column for full species name that will match the corresponding column in the genetic database
-globaltraits$Species<- paste("Acropora",data$species, sep = " ")
+globaltraits$Species<- paste("Acropora",globaltraits$species, sep = " ")
 # merge the two spreadsheets by Species
 traitmerge <- merge(persite,globaltraits, by = 'Species')
 head(traitmerge)
