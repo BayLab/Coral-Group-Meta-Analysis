@@ -97,6 +97,14 @@ persite <- filt %>%
 persite$He.all <- rowMeans(persite[,c("He","He.mean")],na.rm=T) #This contains He reported both per locus and as a mean
 dim(persite)
 
+# read in the global trait estimates
+globaltraits <- read.csv('data/Global.estimates.csv')
+# add a column for full species name that will match the corresponding column in the genetic database
+globaltraits$Species<- paste("Acropora",data$species, sep = " ")
+# merge the two spreadsheets by Species
+traitmerge <- merge(persite,globaltraits, by = 'Species')
+head(traitmerge)
+
 ##Map locations for all species
 plot(persite$Longitude,persite$Latitude,pch=19,col="red")
 mymap <- getMap(resolution = "low")
