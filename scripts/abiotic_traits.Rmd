@@ -53,7 +53,9 @@ abiotic.sites.environment<-data.frame(Name=abiotic.sites, depth=extract(sst,abio
 head.matrix(abiotic.sites.environment) #there is a column called "layer" but the values are the same as the ones in the SST so code in line 54 just pulls out the desired columns
 
 abiotic_info<-abiotic.sites.environment[,c("Name.long","Name.lat","BO2_tempmean_ss","BO2_ppmean_ss")]
+View(abiotic_info)
 
+write.csv(abiotic_info, "Abiotic_Conditions_2.csv")
 ```
 
 
