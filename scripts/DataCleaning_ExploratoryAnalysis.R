@@ -16,12 +16,12 @@ d$Ocean[d$Longitude>-100 & d$Longitude<0] <- "Caribbean"
 d$Ocean[d$Longitude>0 & d$Longitude<100] <- "Indian"
 
 # read in the global trait estimates
-globaltraits <- read.csv('data/Global.estimates.csv')
-# add a column for full species name that will match the corresponding column in the genetic database
-globaltraits$Species<- paste("Acropora",globaltraits$species, sep = " ")
-# merge the two spreadsheets by Species
-d <- merge(d,globaltraits, by = 'Species')
-head(d)
+# globaltraits <- read.csv('data/Global.estimates.csv')
+# # add a column for full species name that will match the corresponding column in the genetic database
+# globaltraits$Species<- paste("Acropora",globaltraits$species, sep = " ")
+# # merge the two spreadsheets by Species
+# d <- merge(d,globaltraits, by = 'Species')
+# head(d)
 
 
 ##Do some filtering
@@ -49,11 +49,23 @@ for (i in 1:nrow(filt)) {
     filt$He.all[i] <- rnorm(1,mean=filt$He.mean[i],sd=mean.sd)
   }
 }
+filt$He.all[filt$He.all>1] <- 1 # If we happen to get a >1 value, adjust to 1
+
+
+###Now for allelic richness. The problem is that AR varies with sample size.
+hist(filt$Sample.Size)
+hist(filt$He.all)
+hist(asin(filt$He.all)) #def improved normality
+plot(log(filt$A),asin(filt$He.all)) # These are the transformations from Pinsky et al. Looks pretty linear!
+summary(lm(log(filt$A)~asin(filt$He.all))) # R2=0.66
+filt$adj.He <- asin(filt$He.all)
+filt.sub <- filt[,c(1:16,30,32:35)]
+write.csv(filt.sub,"data/Heterozygosity_fixed_07.28.20.csv")
 
 ##Plot all "He.all" points against latitude
 p <- ggplot(filt,aes(x=Latitude)) +
-  geom_point(aes(y=He.all)) + 
-  stat_smooth(aes(y=He.all),method="lm",formula=y~poly(x,2)) +
+  geom_point(aes(y=adj.He)) + 
+  stat_smooth(aes(y=adj.He),method="lm",formula=y~poly(x,2)) +
   theme_bw()
 p # Doesn't look like much :P
 

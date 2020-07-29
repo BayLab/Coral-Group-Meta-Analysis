@@ -4,6 +4,8 @@ library(viridis)
 library(ggplot2)
 library(RColorBrewer)
 
+###Download data from here: https://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-count-rev11/data-download
+###Put it in the data folder but DO NOT try to push it to github - it's too big!
 
 ##Read in data from the Gridded Population of the World V4 counts. Here I have just 2015 data
 path="data/gpw-v4-population-count-rev11_2015_30_sec_tif/gpw_v4_population_count_rev11_2015_30_sec.tif"
