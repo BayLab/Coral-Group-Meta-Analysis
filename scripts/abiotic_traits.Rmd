@@ -1,19 +1,21 @@
 ---
-title: "Abiotic Factors - Coral Group"
+title: "Abiotic Factors (SST & PP) - Coral Group"
 output: html_document
 date: 6/3/20
-by: MK
+by: M. Kawahara
 ---
 
 ```{r}
 #Following code is from Bio-Oracle's website for integration with R
 install.packages("sdmpredictors")
 install.packages("leaflet")
+install.packages("readr")
 
 library(sdmpredictors)
+library(leaflet)
 list_datasets()
 list_layers() #<-shows layer codes
-layer_stats()
+layer_stats() #<-not sure what all the information is
 
 ```
 
@@ -28,51 +30,60 @@ title(cex.sub = 1.25, sub = "Maximum temperature at the sea bottom (ºC)")
 
 ```
 
-**Mean Sea Surface Tempearture**
+**Mean Sea Surface Temperature**
 ```{r}
-library(sdmpredictors)
-library(leaflet)
+layers.bio2 <-list_layers( datasets="Bio-ORACLE" )
 
-layers.bio2 <- list_layers( datasets="Bio-ORACLE" )
+#Download environmental data layers (Sea surafce temperature and primary productivity at Sea Surface)
+abiotic_factors<-load_layers(layercodes = c("BO2_tempmean_ss", "BO2_ppmean_ss"), equalarea=FALSE, rasterstack=TRUE)
+#BO2_tempmean_ss = sea surface temperature mean - units in degrees celcius
+#BO2_ppmean_bdmean = mean sea surface net primary productivity of carbon
 
-#abiotic_factors<-load_layers("BO2_tempmean_ss")
+#Upload unique lat;long list
+latlongs<-read.csv("~/Desktop/2020_BayLab_Coral_Group/Acropora_UniqueLocations.csv")
+lat<-latlongs$Latitude
+long<-latlongs$Longitude
 
-abiotic_factors<-load_layers(layercodes = c("BO2_tempmean_ss", "BO2_chlomean_bdmean"), equalarea=FALSE, rasterstack=TRUE)
+abiotic.sites<-data.frame(long, lat)
+sst<-load_layers("BO2_tempmean_ss")
+pp<-load_layers("BO2_ppmean_ss")
 
-#BO2_tempmean_ss = sea surface temperature mean
-#BO2_ppmean_bdmean = net primary production of carbon at mean bottom depth
-#BO2_chlomean_bdmean = chlorophyll concentration (mean at mean depth)
+#Create dataset of values for SST and PP
+abiotic.sites.environment<-data.frame(Name=abiotic.sites, depth=extract(sst,abiotic.sites[1:2]), extract(abiotic_factors, abiotic.sites[1:2]))
+head.matrix(abiotic.sites.environment) #there is a column called "layer" but the values are the same as the ones in the SST so code in line 54 just pulls out the desired columns
 
-bathymetry <- load_layers("BO_bathymean")
+abiotic_info<-abiotic.sites.environment[,c("Name.long","Name.lat","BO2_tempmean_ss","BO2_ppmean_ss")]
+View(abiotic_info)
 
-sites<-data.frame(Name=c("Naha, Japan", "Western Austrailia", "Walea Kepulauan, Indonesia"), Lon=c(127.33,113.72,122.16), Lat=c(26.2,-28.41,-0.24))
-
-#Visualize sites of interest in google maps
-google<-leaflet()
-google<-addTiles(google)
-google<-addMarkers(google, lng = sites$Lon, lat=sites$Lat, popup = sites$Name)
-google
-
-#Extract enviornmental values from layers
-sites.abiotic<-data.frame(Name=sites$Name, depth=extract(bathymetry,sites[,2:2]), extract(abiotic_factors,sites[,2:2]))
-sites.abiotic #this gives weird temperature values
-
-View(layers.bio2)
-View(abiotic_factors)
-```
-
-**Mean Sea Surface Temp Graph**
-```{r}
-temp.ss <- load_layers("BO2_tempmean_ss")
-sites.ext <- extent(100, 145, -25, 45)
-temp.ss.crop <- crop(temp.ss, sites.ext)
-my.colors = colorRampPalette(c("#5E85B8","#EDF0C0","#C13127"))
-plot(temp.ss.crop,col=my.colors(1000),axes=FALSE, box=FALSE) +
-title(cex.sub = 1.25, sub = "Sea Surface Temperature (ºC)")
-
-#just gives temp for the area not sure how to get exact values for specific locations
+write.csv(abiotic_info, "Abiotic_Conditions_2.csv")
 ```
 
 
+```{r}
+#Visualize the sites on google maps
+a<-leaflet()
+a<-addTiles(a)
+a<-addMarkers(a, lng=long,lat=lat, popup = abiotic.sites$Name)
+a
+```
+
+**Mean Sea Surface Temp Graph for Hawaii**
+```{r}
+#Creating maps of the abiotic factors
+HI<-extent(-162,-152,16,25) #"extent" is lat/long limits for the area
+sst.HI.crop<-crop(sst,HI)
+
+my.colors=colorRampPalette(c("#5E85B8","#EDF0C0","#C13127"))
+plot(sst.HI.crop, col=my.colors(1000), axes=FALSE, box=FALSE) + title(cex.sub=1.25, sub="Mean Sea Surface Temperature")
+```
+
+**Mean Sea Surface Temp Graph for the Globe**
+```{r}
+world<-extent(-180,180,-50,50)
+sst.globe<-crop(sst,world)
+
+plot(sst.globe, col=my.colors(1000), axes=FALSE, box=FALSE) + title(cex.sub=1.25, sub="Mean Sea Surface Temperature")
+
+```
 
 
