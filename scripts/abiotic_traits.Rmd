@@ -3,7 +3,7 @@ title: "Abiotic Factors (SST & PP) - Coral Group"
 output: html_document
 created: 6/3/20
 last update: 8/3/20
-by: M. Kawahara
+by: M.Kawahara
 ---
 
 ```{r}
