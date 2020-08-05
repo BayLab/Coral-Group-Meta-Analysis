@@ -52,8 +52,15 @@ pp<-load_layers("BO2_ppmean_ss")
 abiotic.sites.environment<-data.frame(Name=abiotic.sites, depth=extract(sst,abiotic.sites[1:2]), extract(abiotic_factors, abiotic.sites[1:2]))
 head.matrix(abiotic.sites.environment) #there is a column called "layer" but the values are the same as the ones in the SST so code in line 54 just pulls out the desired columns
 
-abiotic_info<-abiotic.sites.environment[,c("Name.long","Name.lat","BO2_tempmean_ss","BO2_ppmean_ss")]
+names(abiotic_info)[names(abiotic_info)=="Name.long"] <-"Longitude"
+
+abiotic_info<-abiotic.sites.environment[,c("Longitude","Latitude","BO2_tempmean_ss","BO2_ppmean_ss")]
 View(abiotic_info)
+
+#changed column names to merge with dataset that contains species name column
+names(abiotic_info)[names(abiotic_info)=="Name.long"] <-"Longitude" 
+names(abiotic_info)[names(abiotic_info)=="Name.lat"] <-"Latitude"
+
 
 write.csv(abiotic_info, "Abiotic_Conditions_2.csv")
 ```
@@ -85,5 +92,32 @@ sst.globe<-crop(sst,world)
 plot(sst.globe, col=my.colors(1000), axes=FALSE, box=FALSE) + title(cex.sub=1.25, sub="Mean Sea Surface Temperature")
 
 ```
+
+**Merging Abiotic Factors with Genetic Data**
+```{r}
+#Didn't have a species column in abiotic_info so created one in order to merge it with the "gen" dataset
+Species <-gen[,c("Longitude","Species")]
+abiotic_merge<-merge(gen, abiotic, by.x=c("Latitude","Longitude","Species"), by.y=c("Latitude","Longitude","Species"))
+
+
+imp.vars <- c("He.all","Species","Ocean",
+              "Latitude","Longitude","Sample.year",
+              "Number","Cross.species","Primer.note","BO2_tempmean_ss","BO2_ppmean_ss") #"He.all" is heterozygosity
+sub <- abiotic_merge[,imp.vars]
+nona <- na.omit(sub) # This framework doesn't handle missing data so the the more variables you include the more data you lose
+dim(nona)
+rf <- randomForest(He.all~.,data=nona)
+rf # We can see % Variance explained here
+varImpPlot(rf)
+
+
+
+pairs(abiotic_merge[,c("Longitude","Latitude","BO2_tempmean_ss","BO2_ppmean_ss","Sample.year")]) 
+
+
+
+```
+
+
 
 
