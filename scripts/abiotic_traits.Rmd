@@ -122,13 +122,12 @@ pairs(abiotic_merge[,c("Longitude","Latitude","BO2_tempmean_ss","BO2_ppmean_ss",
 **Adding my columns to the MasterDataFrame dataset**
 ```{r}
 
-MasterDataFrame <- read.csv("data/MasterDataFrame.csv")
+MasterDataFrame <- read.csv("data/MasterDataFrame.csv") #sometimes this doesnt run in rmd but will run in console
 data <-MasterDataFrame
 abiotic_mdf<-merge(data, abiotic, by.x=c("Latitude","Longitude","Species"), by.y=c("Latitude","Longitude","Species"))
 
-write.csv(abiotic_mdf,"MasterDataFrame.csv")
-
-
+setwd("/Users/mackenziekawahara/Desktop/2020_BayLab_Coral_Group/Coral-Group-Meta-Analysis")
+write.csv(abiotic_mdf,"data/MasterDataFrame.csv")
 
 ```
 
