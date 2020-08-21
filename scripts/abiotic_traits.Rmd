@@ -37,8 +37,8 @@ layers.bio2 <-list_layers( datasets="Bio-ORACLE" )
 
 #Download environmental data layers (Sea surafce temperature and primary productivity at Sea Surface)
 abiotic_factors<-load_layers(layercodes = c("BO2_tempmean_ss", "BO2_ppmean_ss"), equalarea=FALSE, rasterstack=TRUE)
-#BO2_tempmean_ss = sea surface temperature mean - units in degrees celcius
-#BO2_ppmean_bdmean = mean sea surface net primary productivity of carbon
+#BO2_tempmean_ss = sea surface temperature mean - units in degrees celsius
+#BO2_ppmean_ss = mean sea surface net primary productivity of carbon
 
 #Upload unique lat;long list
 latlongs<-read.csv("~/Desktop/2020_BayLab_Coral_Group/Acropora_UniqueLocations.csv")
