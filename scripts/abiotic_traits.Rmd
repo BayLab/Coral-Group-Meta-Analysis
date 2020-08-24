@@ -132,7 +132,7 @@ abiotic_mdf<-merge(alldata, abiotic_info, by.x=c("Latitude","Longitude","Number"
 #Check dimensions - should be 3589 and 27
 dim(abiotic_mdf)
 
-write.csv(abiotic_mdf,"data/MasterDataFrame.csv")
+write.csv(abiotic_mdf, "data/MasterDataFrame_MLA.csv")
 
 ```
 
