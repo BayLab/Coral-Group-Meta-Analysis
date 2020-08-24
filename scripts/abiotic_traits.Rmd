@@ -100,7 +100,7 @@ gen <-Heterozygosity_fixed_07_28_20
 Species <-gen[,c("Longitude","Species")]
 abiotic<-merge(x=Species, y=abiotic_info, by="Longitude")
 
-abiotic_merge<-merge(gen,abiotic, by.x=c("Latitude","Longitude","Species"), by.y=c("Latitude","Longitude","Species"))
+abiotic_merge<-merge(gen,abiotic, by.x=c("Latitude","Longitude","Number"), by.y=c("Latitude","Longitude","Number"))
 
 
 imp.vars <- c("He.all","Species","Ocean",
@@ -121,12 +121,17 @@ pairs(abiotic_merge[,c("Longitude","Latitude","BO2_tempmean_ss","BO2_ppmean_ss",
 
 **Adding my columns to the MasterDataFrame dataset**
 ```{r}
+MasterDataFrame<-read.csv("data/MasterDataFrame_MLA.csv")
 
-MasterDataFrame <- read.csv("data/MasterDataFrame.csv") #sometimes this doesnt run in rmd but will run in console
-data <-MasterDataFrame
-abiotic_mdf<-merge(data, abiotic, by.x=c("Latitude","Longitude","Species"), by.y=c("Latitude","Longitude","Species"))
+#This adds the columns "loc" and "Number" into my abiotic_info dataset, BUT make sure the variables in the columns are in the same order
+abiotic_info$loc=latlongs$loc
+abiotic_info$Number=latlongs$Number
 
-setwd("/Users/mackenziekawahara/Desktop/2020_BayLab_Coral_Group/Coral-Group-Meta-Analysis")
+abiotic_mdf<-merge(alldata, abiotic_info, by.x=c("Latitude","Longitude","Number","loc"), by.y=c("Latitude","Longitude","Number","loc"))
+
+#Check dimensions - should be 3589 and 27
+dim(abiotic_mdf)
+
 write.csv(abiotic_mdf,"data/MasterDataFrame.csv")
 
 ```
