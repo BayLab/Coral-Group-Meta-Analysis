@@ -53,9 +53,7 @@ pp<-load_layers("BO2_ppmean_ss")
 abiotic.sites.environment<-data.frame(Name=abiotic.sites, depth=extract(sst,abiotic.sites[1:2]), extract(abiotic_factors, abiotic.sites[1:2]))
 head.matrix(abiotic.sites.environment) #there is a column called "layer" but the values are the same as the ones in the SST so code in line 54 just pulls out the desired columns
 
-names(abiotic_info)[names(abiotic_info)=="Name.long"] <-"Longitude"
-
-abiotic_info<-abiotic.sites.environment[,c("Longitude","Latitude","BO2_tempmean_ss","BO2_ppmean_ss")]
+abiotic_info<-abiotic.sites.environment[,c("Name.long","Name.lat","BO2_tempmean_ss","BO2_ppmean_ss")]
 View(abiotic_info)
 
 #changed column names to merge with dataset that contains species name column
@@ -97,8 +95,12 @@ plot(sst.globe, col=my.colors(1000), axes=FALSE, box=FALSE) + title(cex.sub=1.25
 **Merging Abiotic Factors with Genetic Data**
 ```{r}
 #Didn't have a species column in abiotic_info so created one in order to merge it with the "gen" dataset
+gen <- read.csv("data/Heterozygosity_fixed_07.28.20.csv")
+gen <-Heterozygosity_fixed_07_28_20
 Species <-gen[,c("Longitude","Species")]
-abiotic_merge<-merge(gen, abiotic, by.x=c("Latitude","Longitude","Species"), by.y=c("Latitude","Longitude","Species"))
+abiotic<-merge(x=Species, y=abiotic_info, by="Longitude")
+
+abiotic_merge<-merge(gen,abiotic, by.x=c("Latitude","Longitude","Species"), by.y=c("Latitude","Longitude","Species"))
 
 
 imp.vars <- c("He.all","Species","Ocean",
@@ -115,10 +117,17 @@ varImpPlot(rf)
 
 pairs(abiotic_merge[,c("Longitude","Latitude","BO2_tempmean_ss","BO2_ppmean_ss","Sample.year")]) 
 
-
-
 ```
 
+**Adding my columns to the MasterDataFrame dataset**
+```{r}
 
+MasterDataFrame <- read.csv("data/MasterDataFrame.csv") #sometimes this doesnt run in rmd but will run in console
+data <-MasterDataFrame
+abiotic_mdf<-merge(data, abiotic, by.x=c("Latitude","Longitude","Species"), by.y=c("Latitude","Longitude","Species"))
 
+setwd("/Users/mackenziekawahara/Desktop/2020_BayLab_Coral_Group/Coral-Group-Meta-Analysis")
+write.csv(abiotic_mdf,"data/MasterDataFrame.csv")
+
+```
 
