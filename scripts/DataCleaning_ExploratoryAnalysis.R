@@ -15,15 +15,6 @@ d$Ocean <- "Pacific"
 d$Ocean[d$Longitude>-100 & d$Longitude<0] <- "Caribbean"
 d$Ocean[d$Longitude>0 & d$Longitude<100] <- "Indian"
 
-# read in the global trait estimates
-# globaltraits <- read.csv('data/Global.estimates.csv')
-# # add a column for full species name that will match the corresponding column in the genetic database
-# globaltraits$Species<- paste("Acropora",globaltraits$species, sep = " ")
-# # merge the two spreadsheets by Species
-# d <- merge(d,globaltraits, by = 'Species')
-# head(d)
-
-
 ##Do some filtering
 N.threshold = 10 # Sample size threshold
 filt <- d %>% 
