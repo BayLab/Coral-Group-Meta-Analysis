@@ -4,9 +4,9 @@ library(rworldmap)
 library(beeswarm)
 
 ##Read in Excel spreadsheet
-d <- read.csv("~/Documents/CoralRG/Meta-Analysis/data/GeneticData_Acropora_cleaned.csv")
+d <- read.csv("~/Desktop/Coral-Group-Meta-Analysis/data/GeneticData_Acropora_cleaned.csv")
 dim(d)
-
+head(d)
 ##Give each location a unique identifier
 d$loc <- paste(d$Number,d$Latitude,d$Longitude,sep="_")
 
@@ -14,6 +14,20 @@ d$loc <- paste(d$Number,d$Latitude,d$Longitude,sep="_")
 d$Ocean <- "Pacific"
 d$Ocean[d$Longitude>-100 & d$Longitude<0] <- "Caribbean"
 d$Ocean[d$Longitude>0 & d$Longitude<100] <- "Indian"
+
+
+d$Species <- as.factor(d$Species)
+class(d$Species)
+globaltraits$Species <- as.factor(globaltraits$Species)
+levels(d$Species)
+# read in the global trait estimates
+globaltraits <- read.csv('data/Global.estimates.csv')
+#  add a column for full species name that will match the corresponding column in the genetic database
+globaltraits$Species<- paste("Acropora",globaltraits$species, sep = " ")
+# merge the two spreadsheets by Species
+ d <- merge(d,globaltraits, by=("Species"), all = T)
+head(d)
+
 
 ##Do some filtering
 N.threshold = 10 # Sample size threshold
@@ -112,14 +126,6 @@ persite <- filt %>%
         filter(n.loci >= n.loci.threshold)
 persite$He.all <- rowMeans(persite[,c("He","He.mean")],na.rm=T) #This contains He reported both per locus and as a mean
 dim(persite)
-
-# read in the global trait estimates
-globaltraits <- read.csv('data/Global.estimates.csv')
-# add a column for full species name that will match the corresponding column in the genetic database
-globaltraits$Species<- paste("Acropora",globaltraits$species, sep = " ")
-# merge the two spreadsheets by Species
-traitmerge <- merge(persite,globaltraits, by = 'Species')
-head(traitmerge)
 
 ##Map locations for all species
 plot(persite$Longitude,persite$Latitude,pch=19,col="red")
