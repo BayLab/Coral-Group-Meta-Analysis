@@ -98,3 +98,5 @@ M2a <- lm(hs.freqs~Depth.upper+Range.size,data=species.frame[complete.cases(spec
 AIC(M1,M2a) #not *quite* a 2 AIC difference
 
 ##So here, our final model is M2, but neither of those variables are significant
+##NOTE! We don't have a ton of observations here:
+nobs(M2)
