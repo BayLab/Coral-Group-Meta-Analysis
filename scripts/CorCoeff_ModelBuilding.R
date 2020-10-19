@@ -21,12 +21,23 @@ dim(persite)
 
 ##Look at 'well represented' species
 persite$n.sites.species <- sapply(persite$Species,function(x) length(which(persite$Species==x))) #Add column that tells us how many sites for the species overall
-nsites.threshold = 5 # Minimum number of sites/species
+nsites.threshold = 10 # Minimum number of sites/species
 good.species <- persite %>%
   filter(n.sites.species >= nsites.threshold)
 dim(good.species)
 good.species.names <- unique(good.species$Species) # This is the number of species we are including
 length(good.species.names)# This is the number of species we are including
+
+
+###Some descriptive plots
+##Just plot distribution of He for well-represented species
+p <- ggplot(good.species,aes(y=He,x=Species,color=Species)) +
+  geom_boxplot() +
+#  geom_dotplot(binaxis='y',stackdir="center",dotsize=0.5) +
+  geom_jitter(shape=16,position=position_jitter(0.2)) +
+  theme_bw() 
+p #Why is palmata so high?
+
 
 ##For each of our good species, calculate correlation (spearman) with env variables
 env.vars <- c("He.all","Latitude","Longitude",
@@ -66,14 +77,14 @@ species.frame$avg.He <- avg.He$x[match(rownames(cor.coeffs),perspecies$Group.1)]
 ##I'll give an example using 'hs.freqs'
 
 ##First, just look at the distribution of the coefficients
-hist(species.frame$hs.freqs)
-length(which(species.frame$hs.freqs>0))/length(species.frame$hs.freqs) 
+hist(species.frame$BO2_tempmean_ss)
+length(which(species.frame$BO2_tempmean_ss>0))/length(species.frame$BO2_tempmean_ss) 
 # 61% of species have positive coefficients
-t.test(species.frame$hs.freqs)
+t.test(species.frame$BO2_tempmean_ss)
 # mean is marginally different from 0
 
 ##Now, build a model with 'all' the trait variables
-M <- lm(hs.freqs~PLD.MAX+Depth.upper+Range.size+Species.age.phylogeny,data=species.frame)
+M <- lm(BO2_tempmean_ss~PLD.MAX+Depth.upper+Range.size+Species.age.phylogeny,data=species.frame)
 summary(M) #Nothing is significant
 shapiro.test(M$residuals) # Testing for normality of residuals - we don't want this to be significant! If it is we'll need to transform some variables
 
@@ -83,18 +94,18 @@ drop1(M)
 # In this case, we get the mose improvement by dropping 'Species.age.phylogeny'
 
 ##Make a new model with one variable dropped
-M1 <- lm(hs.freqs~PLD.MAX+Depth.upper+Range.size,data=species.frame)
+M1 <- lm(BO2_tempmean_ss~PLD.MAX+Depth.upper+Range.size,data=species.frame)
 summary(M1)
 shapiro.test(M1$residuals)
 AIC(M,M1) # There is a >2 AIC difference
 
 ##Should we drop another?
 drop1(M1)
-M2 <- lm(hs.freqs~Depth.upper+Range.size,data=species.frame)
+M2 <- lm(BO2_tempmean_ss~Depth.upper+Range.size,data=species.frame)
 summary(M2)
 shapiro.test(M2$residuals)
 AIC(M1,M2) #uh oh, we have different numbers of observations, so this doesn't work anymore! Let's try the model on just complete rows
-M2a <- lm(hs.freqs~Depth.upper+Range.size,data=species.frame[complete.cases(species.frame),])
+M2a <- lm(BO2_tempmean_ss~Depth.upper+Range.size,data=species.frame[complete.cases(species.frame),])
 AIC(M1,M2a) #not *quite* a 2 AIC difference
 
 ##So here, our final model is M2, but neither of those variables are significant
