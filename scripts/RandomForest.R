@@ -86,9 +86,9 @@ p <- ggplot(master,aes(x=BO_ph)) +
 p
 
 ##For "well-represented" species only
-p <- ggplot(submaster,aes(x=BO_ph,color=Species)) +
-  geom_point(aes(y=adj.He)) + 
-  stat_smooth(aes(y=adj.He),method="lm") +
+p <- ggplot(submaster,aes(x=Depth.upper,y=adj.He,color=Species)) +
+  geom_point() + 
+  stat_smooth(aes(group=1),method="loess",color="black") +
   theme_bw()
 p
 
