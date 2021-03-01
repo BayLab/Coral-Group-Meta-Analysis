@@ -1,0 +1,434 @@
+Taxon,"Taxon-BRI (Bleaching Response Index) (%)                                                   
+",Number of records,"Std Deviation
+",Std Error,"Error of measurement, _BRIj (Eq. 8)","Uncertainty, _BRIj  (Eq. 10)",Taxon-dependent site-BRI sBRIj (Eq.12) (316 sites),Taxon-dependent site-BRI sBRIj (Eq.12) (314 sites*)
+Acanthastrea,29.23,10,34.77,13.14,8.34,13.14,19.17,19.17
+Acanthastrea echinata,42.14,4,39.38,19.69,14.36,19.69,46.63,55.70
+Acanthastrea hemprichii,0,1,,,0.00,0.00,19.51,
+Acanthastrea hillae,0,1,,,0.00,0.00,19.51,
+Acanthastrea lordhowensis,0,1,,,0.00,0.00,19.51,
+Acropora,39.17,320,26.36,2.05,1.98,2.05,36.73,37.05
+Acropora abrotanoides,20.00,1,,,0.00,0.00,19.41,
+Acropora aculeus,17.69,1,,,0.00,0.00,19.42,
+Acropora acuminata,35.75,2,,,18.11,18.11,30.51,30.51
+Acropora anthocercis,0,1,,,0.00,0.00,19.51, 
+Acropora arabensis,61.60,5,13.56,6.06,17.45,17.45,61.60,61.60
+Acropora aspera,40.75,6,15.54,6.34,11.37,11.37,26.31,28.04
+Acropora austera,23.26,2,,,12.80,12.80,19.63,19.80
+Acropora carduus,27.69,1,,,0.00,0.00,19.37, 
+Acropora cerealis,48.63,3,46.29,26.72,18.73,26.72,33.33,40.26
+Acropora cervicornis,31.93,12,23.20,6.70,5.59,6.70,24.09,25.18
+Acropora clathrata,32.99,6,12.92,5.27,9.73,9.73,25.74,27.00
+Acropora cytherea,42.48,7,33.10,12.51,9.03,12.51,32.47,34.65
+Acropora digitifera,31.84,12,27.26,7.87,5.52,7.87,26.97,27.65
+Acropora divaricata,28.06,3,13.31,7.69,12.08,12.08,26.82,30.51
+Acropora echinata,71.50,1,,,36.21,36.21,53.97,53.97
+Acropora elseyi,25.43,2,,,12.81,12.81,25.88,32.33
+Acropora eurystoma,52.60,1,,,18.56,18.56,40.97,40.97
+Acropora florida,45.69,3,35.97,20.77,21.25,21.25,28.51,33.04
+Acropora gemmifera,71.07,4,32.55,16.28,15.20,16.28,44.54,52.92
+Acropora glauca,24.35,1,,,1.04,1.04,19.39, 
+Acropora grandis,24.23,4,15.59,7.80,9.09,9.09,20.79,21.26
+Acropora horrida,19.40,3,15.90,9.18,8.54,9.18,28.91,33.65
+Acropora humilis,51.14,5,34.27,15.32,15.50,15.50,35.70,39.76
+Acropora hyacinthus,35.71,17,25.58,6.20,5.62,6.20,29.54,30.18
+Acropora latistella,25.27,4,20.28,10.14,4.57,10.14,25.08,26.98
+Acropora listeri,18.46,1,,,0.00,0.00,19.42, 
+Acropora longicyathus,25.88,1,,,1.04,1.04,19.38, 
+Acropora loripes,9.38,1,,,1.38,1.38,19.47, 
+Acropora lutkeni,13.73,1,,,2.42,2.42,19.44, 
+Acropora microclados,0,1,,,0.00,0.00,19.51, 
+Acropora microphthalma,7.26,8,6.66,2.36,1.55,2.36,16.29,15.66
+Acropora millepora,34.19,4,17.79,8.90,9.02,9.02,44.68,53.08
+Acropora monticulosa,45.23,2,,,22.46,22.46,45.46,71.50
+Acropora muricata,29.30,13,18.10,5.02,5.74,5.74,24.11,24.50
+Acropora nasuta,58.94,6,36.44,14.88,9.13,14.88,40.75,45.01
+Acropora palmata,25.82,11,22.90,6.90,5.99,6.90,20.73,21.59
+Acropora pharaonis,35.75,1,,,25.61,25.61,16.50,16.50
+Acropora pulchra,8.40,4,3.90,1.95,2.78,2.78,11.05,8.25
+Acropora robusta,36.04,14,31.41,9.93,6.70,9.93,30.35,31.57
+Acropora samoensis,11.54,1,,,0.00,0.00,19.46, 
+Acropora sarmentosa,12.19,1,,,1.73,1.73,19.45, 
+Acropora secale,31.03,5,10.70,4.79,10.19,10.19,28.69,31.00
+Acropora selago,12.31,1,,,0.00,0.00,19.45, 
+Acropora seriata,2.75,1,,,3.04,3.04,2.75,2.75
+Acropora solitaryensis,29.88,1,,,2.42,2.42,19.36, 
+Acropora spathulata,10.08,1,,,0.69,0.69,19.46, 
+Acropora subglabra,35.75,1,,,25.61,25.61,32.33,32.33
+Acropora subulata,29.57,4,18.25,9.13,5.09,9.13,22.66,23.74
+Acropora tenuis,37.85,5,23.73,10.61,12.46,12.46,29.35,31.82
+Acropora valenciennesi,32.82,4,5.86,2.93,11.11,11.11,24.23,25.84
+Acropora valida,16.35,3,17.01,9.82,8.57,9.82,34.20,41.56
+Acropora willisae,0,1,,,0.00,0.00,19.51, 
+Acropora yongei,15.96,1,,,1.73,1.73,19.43, 
+Agaricia,32.24,55,24.80,3.92,3.09,3.92,28.92,28.92
+Agaricia agaricites,33.51,13,30.66,8.50,3.66,8.50,14.61,14.82
+Agaricia fragilis,7.33,3,5.72,3.31,4.97,4.97,7.91,5.50
+Agaricia grahamae,2.75,2,,,2.15,2.15,7.73,2.75
+Agaricia humilis,11.00,1,,,7.57,7.57,12.57, 
+Agaricia lamarcki,25.54,8,32.30,11.42,4.87,11.42,22.20,23.57
+Agaricia tenuifolia,32.08,12,27.76,8.01,7.91,8.01,19.36,20.17
+Agaricia undata,2.75,2,,,2.15,2.15,7.73,2.75
+Alveopora,25.31,3,23.19,13.39,5.60,13.39,31.88,31.88
+Astrea curta,10.25,17,24.26,5.88,3.03,5.88,7.18,6.25
+Astreopora,23.38,20,14.76,3.30,3.60,3.60,31.79,31.79
+Astreopora myriophthalma,2.75,1,,,3.04,3.04,22.00,22.00
+Australogyra zelli,55.89,1,,,21.03,21.03,19.23, 
+Catalaphyllia jardinei,2.75,1,,,0.00,0.00,56.12,56.12
+Caulastraea,26.57,5,20.64,9.23,9.19,9.23,41.25,41.25
+Caulastraea furcata,4.55,2,,,0.00,0.00,37.84,56.20
+Cladocora arbuscula,2.75,1,,,3.04,3.04,12.72, 
+Coelastrea aspera,14.27,4,16.87,8.44,6.54,8.44,23.69,25.10
+Coeloseris mayeri,35.96,4,1.92,0.96,11.29,11.29,29.72,33.17
+Colpophyllia amaranthus,2.75,1,,,8.15,8.15,12.72, 
+Colpophyllia natans,17.97,22,16.93,3.61,2.96,3.61,21.11,21.51
+Coscinaraea,26.50,9,24.46,8.65,6.86,8.65,30.77,30.77
+Coscinaraea columna,6.51,1,,,2.79,2.79,19.48, 
+Coscinaraea exesa,8.00,2,,,6.25,6.25,35.07,50.62
+Coscinaraea monile,37.13,2,,,22.50,22.50,45.38,45.38
+Ctenactis,0,2,,,0.00,0.00,4.98,4.98
+Ctenactis echinata,0,1,,,0.00,0.00,19.51, 
+Cycloseris,37.67,26,20.63,5.33,4.98,5.33,49.23,49.23
+Cycloseris curvata,17.50,4,20.21,10.11,8.08,10.11,28.45,28.45
+Cycloseris distorta,1.38,2,,,1.52,1.52,21.13,21.13
+Cyphastrea,21.75,13,28.55,9.03,7.01,9.03,40.12,40.12
+Cyphastrea chalcidicum,0,1,,,0.00,0.00,19.51, 
+Cyphastrea decadia,0.79,1,,,0.79,0.79,19.51, 
+Cyphastrea microphthalma,6.54,1,,,0.00,0.00,19.48, 
+Cyphastrea ocellina,5.50,1,,,4.30,4.30,22.00,22.00
+Cyphastrea serailia,8.64,1,,,1.68,1.68,19.47, 
+Danafungia horrida,0,2,,,0.00,0.00,19.51, 
+Dendrogyra cylindrus,45.38,2,,,25.89,25.89,23.78,35.42
+Dichocoenia stellaris,2.75,1,,,3.04,3.04,12.72, 
+Dichocoenia stokesii,10.25,5,15.90,7.11,5.41,7.11,15.75,16.51
+Diploastrea,34.21,6,26.14,10.67,10.12,10.67,42.49,42.49
+Diploastrea heliopora,19.94,2,,,5.06,5.06,24.26,29.15
+Diploria,17.33,57,15.74,2.52,2.01,2.52,32.09,32.09
+Diploria clivosa,17.49,4,21.30,10.65,9.03,10.65,21.00,23.81
+Diploria labyrinthiformis,12.28,26,11.79,2.31,2.10,2.31,16.98,17.15
+Diploria strigosa,17.57,18,14.81,3.49,3.43,3.49,21.53,22.06
+Dipsastraea,33.04,65,20.98,3.16,3.05,3.16,31.01,31.16
+Dipsastraea danai,37.43,1,,,4.63,4.63,19.32, 
+Dipsastraea favus,32.05,6,28.24,11.53,6.64,11.53,41.02,45.35
+Dipsastraea laxa,41.50,1,,,0.89,0.89,19.30, 
+Dipsastraea lizardensis,76.00,2,,,25.13,25.13,34.31,49.37
+Dipsastraea maritima,6.73,1,,,1.68,1.68,19.48, 
+Dipsastraea matthaii,31.87,1,,,3.79,3.79,19.35, 
+Dipsastraea maxima,16.00,1,,,12.50,12.50,49.76,49.76
+Dipsastraea pallida,55.04,12,20.23,5.84,9.28,9.28,47.30,49.84
+Dipsastraea rotumana,23.04,2,,,12.80,12.80,24.08,28.70
+Dipsastraea speciosa,33.60,5,21.79,9.75,10.46,10.46,28.65,30.97
+Dipsastraea truncatus,35.19,1,,,3.37,3.37,19.33, 
+Echinophyllia,11.13,7,12.51,5.11,2.27,5.11,37.50,37.50
+Echinophyllia aspera,10.56,1,,,4.37,4.37,19.46, 
+Echinophyllia orpheensis,0,1,,,0.00,0.00,19.51, 
+Echinopora,13.76,20,17.20,4.30,2.89,4.30,18.70,18.70
+Echinopora gemmacea,31.56,2,,,2.70,2.70,30.47,41.52
+Echinopora horrida,0.79,1,,,0.79,0.79,19.51, 
+Echinopora lamellosa,8.87,3,8.34,4.81,1.81,4.81,23.84,28.25
+Echinopora mammiformis,19.16,1,,,4.21,4.21,19.42, 
+Echinopora pacificus,28.60,1,,,5.05,5.05,19.37, 
+Euphyllia glabrescens,2.75,3,0.00,0.00,1.76,1.76,2.75,2.75
+Eusmilia fastigiata,14.13,4,12.98,6.49,2.66,6.49,22.70,26.07
+Favia fragum,34.21,5,21.08,9.43,13.56,13.56,18.91,20.49
+Favites,28.41,52,20.31,3.71,3.07,3.71,31.61,31.61
+Favites abdita,26.03,5,15.29,6.84,8.47,8.47,34.05,37.72
+Favites chinensis,49.37,5,38.82,17.36,14.86,17.36,45.38,45.38
+Favites complanata,20.28,1,,,5.05,5.05,19.41, 
+Favites flexuosa,43.34,4,43.47,21.74,15.07,21.74,34.92,40.09
+Favites halicora,25.66,5,25.44,11.38,9.08,11.38,41.96,47.59
+Favites magnistellata,24.72,1,,,6.31,6.31,19.39, 
+Favites pentagona,27.07,2,,,2.53,2.53,31.19,43.02
+Favites rotundata,32.34,1,,,4.21,4.21,19.35, 
+Favites russelli,14.73,2,,,6.31,6.31,35.04,50.62
+Favites valenciennesi,18.14,2,,,12.50,12.50,34.45,49.39
+Fungia fungites,15.21,4,14.19,7.10,6.94,7.10,28.40,31.37
+Galaxea,32.09,32,19.35,3.72,4.16,4.16,36.77,36.77
+Galaxea acrhelia,29.85,1,,,0.00,0.00,19.36, 
+Galaxea astreata,47.59,3,32.75,18.91,13.62,18.91,37.92,47.15
+Galaxea fascicularis,25.43,7,22.82,8.63,7.91,8.63,35.57,38.80
+Galaxea horrescens,28.51,1,,,1.34,1.34,19.37, 
+Gardineroseris,20.09,7,19.63,7.42,6.54,7.42,4.96,4.96
+Gardineroseris planulata,23.31,6,19.37,7.91,7.61,7.91,24.25,25.22
+Goniastrea,29.31,27,27.23,6.81,4.35,6.81,28.57,28.57
+Goniastrea australensis,22.80,1,,,3.36,3.36,19.40, 
+Goniastrea edwardsi,56.91,2,,,19.01,19.01,34.06,48.87
+Goniastrea favulus,14.95,1,,,0.00,0.00,19.44, 
+Goniastrea pectinata,46.88,3,49.24,28.43,16.76,28.43,30.51,36.10
+Goniastrea retiformis,56.85,6,23.52,9.60,13.15,13.15,42.64,47.31
+Goniastrea stelligera,49.18,4,37.51,18.76,14.28,18.76,27.08,29.69
+Goniopora,27.86,28,21.43,4.37,3.63,4.37,29.67,29.67
+Goniopora columna,36.83,1,,,3.23,3.23,19.33, 
+Goniopora djiboutiensis,23.02,1,,,0.00,0.00,19.40, 
+Goniopora lobata,19.66,3,13.95,8.05,8.91,8.91,27.04,30.83
+Goniopora pedunculata,50.44,1,,,5.36,5.36,19.26, 
+Goniopora stokesi,13.75,1,,,8.15,8.15,55.77,55.77
+Goniopora tenuidens,39.29,1,,,1.45,1.45,19.31, 
+Gyrosmilia,21.45,2,,,6.09,6.09,21.24,21.24
+Halomitra,0,1,,,0.00,0.00,4.98,4.98
+Heliofungia actiniformis,0,1,,,0.00,0.00,19.51, 
+Heliopora,24.92,6,39.20,16.00,4.48,16.00,65.99,65.99
+Heliopora coerulea,9.90,5,15.14,6.77,5.37,6.77,40.54,40.54
+Herpolitha,42.98,4,50.74,25.37,16.81,25.37,41.56,41.56
+Herpolitha limax,0,1,,,0.00,0.00,19.51, 
+Hydnophora,21.77,18,31.82,8.22,3.84,8.22,22.60,22.60
+Hydnophora exesa,30.07,2,,,1.12,1.12,30.26,41.05
+Hydnophora microconos,10.22,2,,,1.74,1.74,16.70,13.97
+Hydnophora rigida,25.62,5,33.28,14.88,2.83,14.88,34.26,37.97
+Isophyllia rigida,2.75,1,,,3.04,3.04,12.72, 
+Isophyllia sinuosa,2.75,1,,,3.04,3.04,12.72, 
+Isopora,34.94,13,25.63,8.54,8.11,8.54,30.64,30.64
+Isopora brueggemanni,29.58,3,10.69,6.17,12.11,12.11,26.82,30.51
+Isopora cuneata,18.96,1,,,1.04,1.04,19.42, 
+Isopora palifera,40.85,8,22.82,8.07,9.68,9.68,36.78,39.69
+Leptastrea,16.83,13,15.73,4.97,4.96,4.97,26.74,26.74
+Leptastrea pruinosa,7.15,1,,,1.26,1.26,19.48, 
+Leptastrea purpurea,15.73,3,17.59,10.16,8.61,10.16,23.67,25.77
+Leptastrea transversa,16.27,3,19.40,11.20,8.66,11.20,26.94,30.67
+Leptoria,32.60,13,31.78,9.58,5.25,9.58,17.49,17.49
+Leptoria irregularis,66.12,1,,,10.51,10.51,19.18, 
+Leptoria phrygia,46.01,7,33.85,12.79,8.66,12.79,45.06,49.36
+Leptoseris,21.48,15,30.58,8.48,4.92,8.48,23.96,25.45
+Leptoseris cucullata,11.00,7,11.99,4.53,4.13,4.53,7.36,6.57
+Leptoseris gardineri,71.50,1,,,36.21,36.21,53.97,53.97
+Leptoseris papyracea,71.50,1,,,36.21,36.21,53.97,53.97
+Leptoseris yabei,19.26,1,,,9.42,9.42,19.42, 
+Lithophyllon concinna,6.33,2,,,3.84,3.84,26.15,32.79
+Lobactis scutaria,2.75,2,,,2.15,2.15,20.76,22.00
+Lobophyllia,39.87,33,17.36,3.62,4.74,4.74,40.57,40.57
+Lobophyllia corymbosa,42.83,3,25.87,14.94,14.85,14.94,34.02,41.33
+Lobophyllia flabelliformis,21.54,1,,,0.00,0.00,19.40, 
+Lobophyllia hataii,35.75,2,,,18.11,18.11,36.74,53.97
+Lobophyllia hemprichii,50.42,7,30.03,11.35,10.73,11.35,44.41,48.58
+Lobophyllia pachysepta,0,1,,,0.00,0.00,19.51, 
+Lobophyllia robusta,4.00,1,,,1.38,1.38,19.49, 
+Madracis,10.06,17,20.59,6.86,4.21,6.86,49.91,49.91
+Madracis auretenra,11.00,1,,,7.57,7.57,12.57, 
+Madracis decactis,2.66,7,3.32,1.25,0.75,1.25,21.17,22.57
+Madracis formosa,2.75,1,,,3.04,3.04,12.72, 
+Madracis myriaster,4.64,5,6.64,2.97,1.80,2.97,27.00,27.00
+Madracis pharensis,2.75,1,,,3.04,3.04,12.72, 
+Madracis senaria,2.75,1,,,3.04,3.04,12.72, 
+Manicina areolata,2.75,1,,,3.04,3.04,12.72, 
+Meandrina danae,2.75,1,,,3.04,3.04,12.72, 
+Meandrina meandrites,16.39,10,10.29,3.25,3.47,3.47,17.22,17.74
+Merulina,47.07,7,40.49,18.11,13.52,18.11,42.76,42.76
+Merulina ampliata,58.64,2,,,25.02,25.02,34.40,49.37
+Merulina scabricula,9.09,1,,,0.00,0.00,19.47, 
+Millepora,36.23,22,22.20,5.73,5.61,5.73,39.89,39.89
+Millepora alcicornis,33.47,4,24.09,12.04,15.31,15.31,20.92,20.92
+Millepora complanata,38.50,1,,,3.04,3.04,38.50,38.50
+Millepora dichotoma,35.75,2,,,18.11,18.11,26.86,26.86
+Millepora exaesa,2.75,1,,,3.04,3.04,13.97,13.97
+Millepora intricata,35.75,3,0.00,0.00,14.78,14.78,22.13,22.13
+Millepora platyphylla,35.75,2,,,18.11,18.11,26.86,26.86
+Millepora tenera,69.93,1,,,12.41,12.41,69.93,69.93
+Montastraea cavernosa,14.42,15,12.88,3.33,2.45,3.33,23.46,24.24
+Montipora,34.81,94,23.62,3.37,2.84,3.37,32.24,32.65
+Montipora aequituberculata,15.61,3,17.66,10.20,8.68,10.20,18.28,17.69
+Montipora caliculata,39.76,1,,,7.86,7.86,19.31, 
+Montipora capitata,13.75,1,,,8.15,8.15,21.18,21.18
+Montipora crassituberculata,15.87,1,,,0.00,0.00,19.43, 
+Montipora danae,72.65,4,32.13,16.06,12.64,16.06,47.62,57.06
+Montipora digitata,18.52,10,10.94,3.46,4.64,4.64,20.70,20.70
+Montipora dilatata,38.50,1,,,25.79,25.79,18.70,18.70
+Montipora flabellata,38.50,1,,,25.79,25.79,18.70,18.70
+Montipora foliosa,19.42,10,14.23,4.50,4.55,4.55,23.78,24.26
+Montipora foveolata,29.93,3,40.88,23.60,2.39,23.60,39.66,49.76
+Montipora grisea,28.62,2,,,10.20,10.20,34.92,50.50
+Montipora hispida,61.58,5,41.22,18.44,13.80,18.44,44.38,50.60
+Montipora hoffmeisteri,23.13,1,,,4.64,4.64,19.40, 
+Montipora informis,72.85,4,22.21,11.10,20.06,20.06,47.18,56.49
+Montipora mollis,52.46,1,,,15.00,15.00,19.25, 
+Montipora monasteriata,31.43,3,7.49,4.32,12.13,12.13,26.81,30.51
+Montipora patula,13.75,1,,,8.15,8.15,21.18,21.18
+Montipora peltiformis,45.32,1,,,15.00,15.00,19.28, 
+Montipora spongodes,60.91,1,,,16.07,16.07,19.20, 
+Montipora tuberculosa,29.43,3,19.36,11.18,9.43,11.18,31.12,37.00
+Montipora undata,43.45,1,,,16.07,16.07,19.29, 
+Montipora venosa,16.38,2,,,11.44,11.44,35.09,50.80
+Montipora verrucosa,2.75,1,,,3.04,3.04,2.75,2.75
+Moseleya,4.00,1,,,0.00,0.00,49.98,49.98
+Mussa angulosa,11.00,1,,,3.04,3.04,12.57, 
+Mycedium,10.57,3,9.94,5.74,3.58,5.74,49.98,49.98
+Mycedium elephantotus,13.85,2,,,5.37,5.37,37.50,55.52
+Mycetophyllia aliciae,11.00,1,,,3.04,3.04,12.57, 
+Mycetophyllia danaana,11.00,1,,,3.04,3.04,12.57, 
+Mycetophyllia ferox,11.00,1,,,3.04,3.04,12.57, 
+Mycetophyllia lamarckiana,11.00,1,,,3.04,3.04,12.57, 
+Mycetophyllia reesi,2.75,1,,,3.04,3.04,12.72, 
+Oculina diffusa,11.00,1,,,7.57,7.57,12.57, 
+Oculina valenciennesi,2.75,1,,,3.04,3.04,12.72, 
+Oculina varicosa,2.75,1,,,8.15,8.15,12.72, 
+Orbicella,20.87,76,17.20,2.51,2.15,2.51,26.43,26.43
+Orbicella annularis,18.89,36,17.29,2.88,2.27,2.88,20.61,20.85
+Orbicella faveolata,21.96,19,14.74,3.38,3.17,3.38,17.53,17.83
+Orbicella franksi,17.37,14,15.59,4.17,3.92,4.17,18.16,18.59
+Oulophyllia,51.99,4,48.02,24.01,13.06,24.01,36.41,36.41
+Oulophyllia crispa,22.43,1,,,0.00,0.00,19.40, 
+Oxypora,4.72,2,,,2.52,2.52,4.92,4.92
+Oxypora lacera,6.94,1,,,2.01,2.01,19.48, 
+Pachyseris,33.20,20,23.79,5.77,4.72,5.77,34.40,34.40
+Pachyseris gemmae,57.38,2,,,16.72,16.72,55.68,55.68
+Pachyseris rugosa,21.72,4,33.63,16.81,6.47,16.81,27.39,30.04
+Pachyseris speciosa,39.28,4,32.06,16.03,7.48,16.03,46.17,55.10
+Palauastrea ramosa,5.50,1,,,4.30,4.30,56.03,56.03
+Paraclavarina,17.04,2,,,0.00,0.00,19.43, 
+Paraclavarina triangularis,16.92,1,,,0.00,0.00,19.43, 
+Parascolymia vitensis,0,1,,,0.00,0.00,19.51, 
+Pavona,37.87,110,25.20,2.93,2.70,2.93,39.71,39.71
+Pavona cactus,31.50,4,29.92,14.96,9.61,14.96,41.34,41.34
+Pavona clavus,44.56,29,24.99,4.64,4.08,4.64,35.74,35.74
+Pavona decussata,5.43,1,,,0.00,0.00,19.49, 
+Pavona duerdeni,47.60,1,,,3.16,3.16,19.27, 
+Pavona explanulata,3.41,1,,,2.79,2.79,19.50, 
+Pavona gigantea,36.86,25,22.75,4.55,4.90,4.90,37.49,37.49
+Pavona maldivensis,3.93,2,,,2.59,2.59,19.49,
+Pavona minuta,63.25,2,,,25.89,25.89,62.87,62.87
+Pavona varians,23.85,13,18.47,5.12,5.76,5.76,31.00,31.96
+Pavona venosa,13.98,3,19.10,11.03,8.54,11.03,27.06,30.85
+Pectinia,58.94,10,39.38,19.69,12.09,19.69,57.82,57.82
+Pectinia alcicornis,3.69,1,,,3.02,3.02,19.50, 
+Pectinia lactuca,68.81,4,45.42,22.71,19.86,22.71,46.91,56.05
+Pectinia paeonia,45.24,3,31.41,18.13,16.41,18.13,40.83,51.51
+Physogyra,37.55,2,,,18.32,18.32,4.90,4.90
+Physogyra lichtensteini,71.50,1,,,36.21,36.21,53.97,53.97
+Platygyra,35.57,55,23.85,3.64,3.72,3.72,33.28,33.28
+Platygyra acuta,4.63,1,,,3.79,3.79,19.49, 
+Platygyra daedalea,45.36,14,22.30,5.96,7.90,7.90,49.36,51.68
+Platygyra lamellina,39.59,3,33.90,19.57,15.08,19.57,46.92,60.74
+Platygyra pini,38.32,1,,,3.79,3.79,19.32, 
+Platygyra ryukyuensis,14.32,2,,,3.89,3.89,21.11,22.84
+Platygyra sinensis,40.05,3,5.24,3.03,12.50,12.50,30.04,35.41
+Platygyra verweyi,34.91,1,,,7.15,7.15,19.34, 
+Plerogyra,41.96,2,,,5.16,5.16,4.69,4.69
+Plerogyra sinuosa,71.50,1,,,0.00,0.00,53.97,53.97
+Plesiastrea,4.75,2,,,4.51,4.51,4.76,4.76
+Plesiastrea versipora,0,1,,,0.00,0.00,19.51, 
+Pleuractis paumotensis,0,2,,,0.00,0.00,26.26,33.00
+Pocillopora,35.37,184,24.19,2.17,1.90,2.17,35.01,35.01
+Pocillopora capitata,35.15,5,5.01,2.24,5.85,5.85,25.90,25.90
+Pocillopora damicornis,42.29,47,29.00,4.23,2.99,4.23,35.95,36.32
+Pocillopora danae,39.84,1,,,0.00,0.00,19.31, 
+Pocillopora elegans,30.97,17,23.48,5.69,3.56,5.69,47.87,47.87
+Pocillopora eydouxi,21.85,12,25.36,7.32,5.48,7.32,30.31,31.30
+Pocillopora inflata,41.25,1,,,33.77,33.77,8.54,8.54
+Pocillopora meandrina,32.77,7,6.80,2.57,5.32,5.32,29.24,29.24
+Pocillopora verrucosa,25.82,28,20.93,3.96,2.53,3.96,20.58,20.63
+Podabacia,2.73,2,,,0.75,0.75,4.98,4.98
+Podabacia crustacea,5.41,1,,,1.35,1.35,19.49, 
+Porites,30.50,236,23.91,1.93,1.79,1.93,36.50,36.74
+Porites annae,5.57,2,,,0.00,0.00,34.73,49.98
+Porites aranetai,35.75,1,,,25.61,25.61,21.40,21.40
+Porites astreoides,16.01,30,14.77,2.70,2.01,2.70,15.84,15.97
+Porites attenuata,35.75,1,,,25.61,25.61,21.40,21.40
+Porites branneri,2.75,1,,,3.04,3.04,12.72, 
+Porites colonensis,2.75,1,,,3.04,3.04,12.72, 
+Porites compressa,33.69,4,31.38,15.69,13.41,15.69,39.67,39.67
+Porites cylindrica,28.95,11,22.82,6.88,5.12,6.88,38.76,40.68
+Porites divaricata,2.75,1,,,3.04,3.04,12.72, 
+Porites evermanni,5.50,1,,,4.30,4.30,22.00,22.00
+Porites furcata,30.22,3,33.29,19.22,3.57,19.22,15.00,16.22
+Porites harrisoni,11.00,1,,,4.08,4.08,27.50,27.50
+Porites heronensis,23.21,1,,,5.36,5.36,19.40, 
+Porites horizontalata,35.75,1,,,25.61,25.61,21.40,21.40
+Porites lichen,15.79,3,18.24,10.53,8.54,10.53,27.13,30.97
+Porites lobata,35.79,30,18.93,3.46,4.49,4.49,36.00,36.00
+Porites lutea,24.58,11,19.36,5.84,5.12,5.84,35.24,35.24
+Porites mayeri,11.69,2,,,1.52,1.52,19.33,19.25
+Porites nigrescens,41.33,6,18.90,7.72,9.23,9.23,37.85,37.85
+Porites panamensis,27.60,8,15.10,5.34,3.29,5.34,22.90,22.90
+Porites porites,19.82,22,15.31,3.27,2.71,3.27,19.00,19.30
+Porites rus,7.28,7,8.76,3.31,2.03,3.31,27.14,28.43
+Porites sillimaniana,35.75,2,,,18.11,18.11,17.03,17.03
+Porites solida,35.75,2,,,18.11,18.11,26.82,26.82
+Porites stephensoni,0,1,,,0.00,0.00,33.00,33.00
+Porites sverdrupi,2.50,2,,,2.50,2.50,23.17,23.17
+Porites vaughani,24.05,1,,,9.29,9.29,19.39, 
+Psammocora,38.00,55,20.63,3.01,3.84,3.84,42.67,42.67
+Psammocora contigua,28.42,3,22.90,13.22,8.96,13.22,32.47,32.47
+Psammocora digitata,41.42,3,27.68,15.98,14.82,15.98,34.03,41.33
+Psammocora stellata,11.86,10,16.64,6.29,4.07,6.29,28.44,28.44
+Psammocora superficialis,5.50,2,,,3.78,3.78,19.97,20.43
+Pseudosiderastrea tayami,2.75,1,,,3.04,3.04,19.25,19.25
+Sandalolitha robusta,0.26,1,,,0.26,0.26,19.51, 
+Scapophyllia,40.16,1,,,19.09,19.09,49.91,49.91
+Scapophyllia cylindrica,16.33,1,,,7.16,7.16,19.43, 
+Scolymia cubensis,11.00,1,,,3.04,3.04,12.57, 
+Scolymia lacera,2.75,1,,,3.04,3.04,12.72, 
+Seriatopora,51.53,17,27.01,6.97,6.50,6.97,33.45,33.45
+Seriatopora caliendrum,65.82,2,,,0.20,0.20,34.36,49.37
+Seriatopora hystrix,61.46,9,28.99,9.66,9.78,9.78,43.05,46.01
+Siderastrea,18.50,33,15.45,2.78,2.48,2.78,30.11,30.11
+Siderastrea radians,23.13,2,,,16.27,16.27,24.41,36.10
+Siderastrea savignyana,2.75,2,,,2.15,2.15,24.41,24.41
+Siderastrea siderea,19.05,25,14.44,2.89,2.86,2.89,20.10,20.43
+Solenastrea bournoni,0,1,,,0.00,0.00,12.77, 
+Stephanocoenia intersepta,18.77,8,13.33,4.71,5.38,5.38,17.15,17.87
+Stylocoeniella,71.50,1,,,36.21,36.21,53.97,53.97
+Stylophora,43.69,23,26.73,5.57,4.98,5.57,26.29,26.29
+Stylophora pistillata,56.42,9,24.52,8.17,7.89,8.17,37.47,39.74
+Symphyllia,5.11,16,3.71,0.99,0.99,0.99,18.15,18.15
+Symphyllia agaricia,10.12,1,,,4.50,4.50,19.46, 
+Symphyllia radians,12.31,1,,,0.00,0.00,19.45, 
+Symphyllia recta,11.57,3,9.12,5.26,2.76,5.26,11.60,7.70
+Turbinaria,31.87,19,20.62,4.86,5.15,5.15,37.35,37.35
+Turbinaria bifrons,71.50,1,,,36.21,36.21,53.97,53.97
+Turbinaria mesenterina,20.87,3,22.43,12.95,11.73,12.95,29.85,29.85
+Turbinaria peltata,71.50,1,,,36.21,36.21,53.97,53.97
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
